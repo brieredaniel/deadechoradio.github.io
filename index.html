@@ -1,11 +1,125 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to DEAD ECHO RADIO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radiowave Studio — Stories in Sound</title>
+  <meta name="description" content="Radiowave Studio blends retro soul and modern craft to create unforgettable audio experiences.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>html{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto}</style>
 </head>
-<body>
-  <h1>Hey Benny!</h1>
-  <p>I have decided to attempt to build this website from scratch using AI and github. Here's what we've got so far</p>
+
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="font-extrabold text-lg tracking-tight">Radiowave Studio</a>
+      <nav class="hidden md:flex gap-6">
+        <a href="#about" class="hover:text-sky-500">About</a>
+        <a href="#work" class="hover:text-sky-500">Work</a>
+        <a href="#contact" class="hover:text-sky-500">Contact</a>
+      </nav>
+      <button class="md:hidden text-2xl" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+    <nav id="mobileMenu" class="hidden flex-col gap-4 bg-white border-t md:hidden px-4 pb-4">
+      <a href="#about" class="hover:text-sky-500">About</a>
+      <a href="#work" class="hover:text-sky-500">Work</a>
+      <a href="#contact" class="hover:text-sky-500">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-sky-50 via-white to-sky-50">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Where the Airwaves Come Alive</h1>
+      <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-8">
+        Capturing the spirit of old-world radio with a modern twist — stories that linger in the static and echo in the dark.
+      </p>
+      <a href="#contact" class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-md font-semibold transition">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
+    <p class="text-slate-700 text-center max-w-2xl mx-auto mb-10">
+      Founded by storytellers and sound engineers, Radiowave Studio is built on the belief that every crackle, hum, and whisper matters.
+      From noir-soaked mystery podcasts to cinematic radio dramas, we craft immersive experiences that haunt and inspire.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h3 class="font-semibold mb-2 text-sky-600">Retro Soul</h3>
+        <p class="text-slate-600 text-sm">We honor the warmth of vintage sound with analog tones and classic storytelling style.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h3 class="font-semibold mb-2 text-sky-600">Modern Craft</h3>
+        <p class="text-slate-600 text-sm">Using today’s tools, we deliver clarity, precision, and cinematic presence to every piece.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h3 class="font-semibold mb-2 text-sky-600">Emotive Design</h3>
+        <p class="text-slate-600 text-sm">Every beat is designed to evoke emotion and create connection between sound and listener.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="bg-slate-100 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Work</h2>
+      <p class="max-w-2xl mx-auto text-slate-700 mb-12">
+        Explore a sample of our productions — from ghostly dramas to intimate interviews.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-xl overflow-hidden shadow bg-white">
+          <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600" alt="Old radio" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Noir Frequencies</h3>
+            <p class="text-sm text-slate-600">An audio drama in fog and flicker.</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow bg-white">
+          <img src="https://images.unsplash.com/photo-1512427691650-1af6f9fef679?w=600" alt="Soundboard" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Signal Lost</h3>
+            <p class="text-sm text-slate-600">A haunting podcast about voices that vanish.</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow bg-white">
+          <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=600" alt="Studio mic" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Transmission Zero</h3>
+            <p class="text-sm text-slate-600">Experimental radio that bends space and sound.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="text-slate-700 mb-10">Interested in collaborating or commissioning a project? We’d love to hear from you.</p>
+    <form class="max-w-md mx-auto grid gap-4" onsubmit="alert('Thanks — message not configured for sending.'); return false;">
+      <input type="text" placeholder="Your Name" required class="border rounded-md p-3 focus:ring focus:ring-sky-200">
+      <input type="email" placeholder="Your Email" required class="border rounded-md p-3 focus:ring focus:ring-sky-200">
+      <textarea rows="4" placeholder="Message" required class="border rounded-md p-3 focus:ring focus:ring-sky-200"></textarea>
+      <button class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-md">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-slate-500">
+      &copy; <span id="year"></span> Radiowave Studio. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
