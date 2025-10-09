@@ -56,7 +56,7 @@
     <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
     <p class="text-slate-200 text-center max-w-2xl mx-auto mb-10">
       Founded by storytellers and sound engineers, Dead Echo Radio is built on the belief that every crackle, hum, and whisper matters.
-      From noir-soaked mystery podcasts to cinematic radio dramas, we craft immersive experiences that haunt and inspire.
+      From noir-soaked spooky podcasts to cinematic radio dramas, we craft immersive experiences that haunt and inspire.
     </p>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="p-6 bg-black/30 rounded-xl shadow">
@@ -68,5 +68,69 @@
         <p class="text-slate-200 text-sm">Using today’s tools, we deliver clarity, precision, and cinematic presence to every piece.</p>
       </div>
       <div class="p-6 bg-black/30 rounded-xl shadow">
-        <h3 class="font-semibold mb-2 text-sky-300">Emotive Design</h3>
-        <p class="text-slate-200 text-sm">Every beat is designed to evoke emotion and create connection between sound and listene
+        <h3 class="font-semibold mb-2 text-sky-300">Evocative Design</h3>
+        <p class="text-slate-200 text-sm">Every beat is designed to evoke emotion and create connection between sound and listener.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="py-20 relative z-10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Work</h2>
+      <p class="max-w-2xl mx-auto text-slate-200 mb-12">
+        Explore a sample of our productions — from ghostly tales to exhilarating sonic journies.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+          <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600" alt="Old radio" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-white">Gothic Whispers</h3>
+            <p class="text-sm text-slate-200">Classic gothic horror stories, told in fog and flicker.</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+          <img src="https://images.unsplash.com/photo-1512427691650-1af6f9fef679?w=600" alt="Soundboard" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-white">The Forbidden Hour</h3>
+            <p class="text-sm text-slate-200">A heartpounding hour of Hard Rock, Heavy Metal, Hardcore, and things that generally make your head go bang.</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+          <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=600" alt="Studio mic" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-white">Phantom Frequencies</h3>
+            <p class="text-sm text-slate-200">Experimental radio that bends space and sound.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="text-slate-200 mb-10">Interested in collaborating or commissioning a project? We’d love to hear from you.</p>
+    <form class="max-w-md mx-auto grid gap-4" onsubmit="alert('Thanks — message not configured for sending.'); return false;">
+      <input type="text" placeholder="Your Name" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300">
+      <input type="email" placeholder="Your Email" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300">
+      <textarea rows="4" placeholder="Message" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300"></textarea>
+      <button class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-md">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-black/30 py-8 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-slate-300">
+      &copy; <span id="year"></span> Dead Echo Radio. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
