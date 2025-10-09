@@ -15,6 +15,16 @@
       background-position: center;
       background-attachment: fixed;
     }
+    /* Hero text glow */
+    .hero-glow {
+      text-shadow: 0 0 6px rgba(255,255,255,0.6), 0 0 12px rgba(255,255,255,0.4);
+    }
+    /* Card glow on hover */
+    .card-glow:hover {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.2);
+      transform: translateY(-4px);
+      transition: all 0.3s ease-in-out;
+    }
   </style>
 </head>
 
@@ -43,8 +53,8 @@
   <!-- Hero -->
   <section class="relative overflow-hidden py-24">
     <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Where the Airwaves Come Alive</h1>
-      <p class="max-w-2xl mx-auto text-lg text-slate-200 mb-8">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-glow">Where the Airwaves Come Alive</h1>
+      <p class="max-w-2xl mx-auto text-lg text-slate-200 mb-8 hero-glow">
         Capturing the spirit of old-world radio with a modern twist — stories that linger in the static and echo in the dark.
       </p>
       <a href="#contact" class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-md font-semibold transition">Get in Touch</a>
@@ -53,21 +63,21 @@
 
   <!-- About -->
   <section id="about" class="max-w-5xl mx-auto px-6 py-20 relative z-10">
-    <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center hero-glow">About Us</h2>
     <p class="text-slate-200 text-center max-w-2xl mx-auto mb-10">
       Founded by storytellers and sound engineers, Dead Echo Radio is built on the belief that every crackle, hum, and whisper matters.
       From noir-soaked spooky podcasts to cinematic radio dramas, we craft immersive experiences that haunt and inspire.
     </p>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-6 bg-black/30 rounded-xl shadow">
+      <div class="p-6 bg-black/30 rounded-xl shadow card-glow">
         <h3 class="font-semibold mb-2 text-sky-300">Fireside Soul</h3>
         <p class="text-slate-200 text-sm">We honor the warmth of vintage sound with analog tones and classic storytelling.</p>
       </div>
-      <div class="p-6 bg-black/30 rounded-xl shadow">
+      <div class="p-6 bg-black/30 rounded-xl shadow card-glow">
         <h3 class="font-semibold mb-2 text-sky-300">Modern Craft</h3>
         <p class="text-slate-200 text-sm">Using today’s tools, we deliver clarity, precision, and cinematic presence to every piece.</p>
       </div>
-      <div class="p-6 bg-black/30 rounded-xl shadow">
+      <div class="p-6 bg-black/30 rounded-xl shadow card-glow">
         <h3 class="font-semibold mb-2 text-sky-300">Evocative Design</h3>
         <p class="text-slate-200 text-sm">Every beat is designed to evoke emotion and create connection between sound and listener.</p>
       </div>
@@ -77,26 +87,26 @@
   <!-- Work -->
   <section id="work" class="py-20 relative z-10">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">Our Work</h2>
+      <h2 class="text-3xl font-bold mb-8 hero-glow">Our Work</h2>
       <p class="max-w-2xl mx-auto text-slate-200 mb-12">
         Explore a sample of our productions — from ghostly tales to exhilarating sonic journies.
       </p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+        <div class="rounded-xl overflow-hidden shadow bg-black/30 card-glow">
           <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600" alt="Old radio" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-white">Gothic Whispers</h3>
             <p class="text-sm text-slate-200">Classic gothic horror stories, told in fog and flicker.</p>
           </div>
         </div>
-        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+        <div class="rounded-xl overflow-hidden shadow bg-black/30 card-glow">
           <img src="https://images.unsplash.com/photo-1512427691650-1af6f9fef679?w=600" alt="Soundboard" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-white">The Forbidden Hour</h3>
             <p class="text-sm text-slate-200">A heartpounding hour of Hard Rock, Heavy Metal, Hardcore, and things that generally make your head go bang.</p>
           </div>
         </div>
-        <div class="rounded-xl overflow-hidden shadow bg-black/30">
+        <div class="rounded-xl overflow-hidden shadow bg-black/30 card-glow">
           <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=600" alt="Studio mic" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-white">Phantom Frequencies</h3>
@@ -109,7 +119,7 @@
 
   <!-- Contact -->
   <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <h2 class="text-3xl font-bold mb-6 hero-glow">Get in Touch</h2>
     <p class="text-slate-200 mb-10">Interested in collaborating or commissioning a project? We’d love to hear from you.</p>
     <form class="max-w-md mx-auto grid gap-4" onsubmit="alert('Thanks — message not configured for sending.'); return false;">
       <input type="text" placeholder="Your Name" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300">
