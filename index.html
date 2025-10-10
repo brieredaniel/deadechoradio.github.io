@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Special+Elite&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Rubik+Glitch&family=Special+Elite&display=swap" rel="stylesheet">
   <style>
-  /* Default body font */
+ /* Default body font */
 html, body {
   font-family: 'Special Elite', serif;
   font-size: 1rem;
@@ -19,13 +19,16 @@ html, body {
   color: #f0f0f0; /* Soft white text for dark backgrounds */
 }
 
-/* Hero & section headers */
+/* Hero & section headers (Major Mono Display) */
 h1, h2 {
   font-family: 'Major Mono Display', monospace;
+  font-weight: 400;           /* ensures proper design, no simulated bold */
   letter-spacing: 1px;
   text-transform: uppercase;
   /* subtle glitch / RGB split effect */
-  text-shadow: 1px 0 cyan, -1px 0 magenta, 0 1px rgba(255,255,255,0.3);
+  text-shadow: 1px 0 rgba(0, 255, 255, 0.6),
+               -1px 0 rgba(255, 0, 255, 0.6),
+               0 1px rgba(255,255,255,0.3);
 }
 
 /* Subheaders & card titles use Inter */
@@ -44,19 +47,21 @@ body {
   background-attachment: fixed;
 }
 
-/* Hero text glow */
+/* Hero text glow (slightly toned down for readability) */
 .hero-glow {
-  text-shadow: 0 0 6px rgba(255,255,255,0.6), 0 0 12px rgba(255,255,255,0.4);
+  text-shadow: 0 0 4px rgba(255,255,255,0.4),
+               0 0 8px rgba(255,255,255,0.3);
 }
 
 /* Card glow on hover */
 .card-glow:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+              0 0 40px rgba(0, 255, 255, 0.2);
   transform: translateY(-4px);
   transition: all 0.3s ease-in-out;
 }
 </style>
-
+  
 </head>
 
 <body class="relative text-white leading-relaxed">
