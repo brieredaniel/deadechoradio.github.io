@@ -46,6 +46,15 @@ body {
   background-attachment: fixed;
 }
 
+    /* Mobile-specific background */
+@media (max-width: 768px) {
+  body {
+    background-image: url('images/smokybooth.jpeg');
+    background-attachment: scroll; /* better performance on mobile */
+    background-size: cover;        /* fill the screen */
+    background-position: center;   /* center the focal point */
+  }
+
 /* Hero text glow (slightly toned down for readability) */
 .hero-glow {
   text-shadow: 0 0 4px rgba(255,255,255,0.4),
