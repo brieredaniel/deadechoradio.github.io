@@ -45,14 +45,7 @@
       color: #f0f0f0;
     }
 
-    /* Background image */
-    body {
-      background-image: url('images/radiointhedark.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
+    /* Background image for mobile only */
     @media (max-width: 768px) {
       body {
         background-image: url('images/mobile/abstractradiohaze.jpeg');
@@ -102,7 +95,7 @@
     </div>  
 
     <!-- RIGHT SIDE (scrollable content) -->
-    <div class="w-full md:w-1/2 md:ml-[50%] h-screen md:h-auto overflow-y-auto bg-black">
+    <div class="w-full md:w-1/2 md:ml-[50%] h-screen md:h-auto overflow-y-auto bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed">
 
       <!-- Header Navigation -->
       <header class="hidden md:block sticky top-0 z-50 bg-white/10 backdrop-blur border-b border-white/10">
