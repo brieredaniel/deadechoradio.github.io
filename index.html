@@ -78,6 +78,16 @@
   <!-- LEFT SIDE (fixed on desktop) -->
   <div class="w-full md:w-1/2 h-1/2 md:h-full bg-gray-900 flex flex-col justify-center items-center text-center p-8 md:fixed md:inset-y-0 md:left-0">
     
+     <!-- Dropdown Button -->
+    <div class="absolute top-4 left-4 z-50">
+      <button id="navToggle" class="bg-black/70 text-white px-4 py-2 rounded-md focus:outline-none">☰</button>
+      <div id="navDropdown" class="hidden flex-col mt-2 bg-black/90 rounded-md shadow-lg">
+        <a href="#work" class="block px-4 py-2 hover:bg-sky-500">Listen</a>
+        <a href="#about" class="block px-4 py-2 hover:bg-sky-500">About</a>
+        <a href="#contact" class="block px-4 py-2 hover:bg-sky-500">Contact</a>
+      </div>
+    </div>
+    
     <!-- Desktop Logo + Wordmark -->
     <div class="hidden md:flex flex-col items-center justify-center w-full max-w-xs mb-6">
       <img src="images/IMG_4799.png" alt="Logo" class="w-full h-auto object-contain mb-4">
@@ -97,16 +107,6 @@
 
     <!-- Background image -->
     <div class="absolute inset-0 bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed -z-10"></div>
-
-    <!-- Dropdown Button -->
-    <div class="absolute top-4 left-4 z-50">
-      <button id="navToggle" class="bg-black/70 text-white px-4 py-2 rounded-md focus:outline-none">☰</button>
-      <div id="navDropdown" class="hidden flex-col mt-2 bg-black/90 rounded-md shadow-lg">
-        <a href="#work" class="block px-4 py-2 hover:bg-sky-500">Listen</a>
-        <a href="#about" class="block px-4 py-2 hover:bg-sky-500">About</a>
-        <a href="#contact" class="block px-4 py-2 hover:bg-sky-500">Contact</a>
-      </div>
-    </div>
 
     <!-- HERO -->
     <section class="relative py-24">
