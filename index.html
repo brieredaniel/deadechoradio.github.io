@@ -103,11 +103,11 @@
         </div>
 
     <!-- Mobile Header: Logo + Woodcut PNG -->
-        <div class="block md:hidden w-full h-48 relative">
+        <div class="block md:hidden w-full text-center">
           <img 
-            src="images/logocompact.png" 
+            src="images/deadechoradio_mobileheader.png" 
             alt="Dead Echo Radio Mobile Header"
-            class="absolute inset-0 w-full h-full object-cover"
+            class="w-full h-auto"
           >
         </div>
       </div>
@@ -115,24 +115,22 @@
     <!-- RIGHT SIDE (scrollable content) -->
     <div class="w-full md:w-1/2 md:ml-[50%] h-screen md:h-auto overflow-y-auto bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed">
 
-      <!-- Header Navigation -->
-      <header class="hidden md:block sticky top-0 z-50 bg-white/10 backdrop-blur border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#" class="font-extrabold text-lg tracking-tight text-white">Dead Echo Radio</a>
-          <nav class="hidden md:flex gap-6">
-            <a href="#work" class="hover:text-sky-300">Work</a>
-            <a href="#about" class="hover:text-sky-300">About</a>
-            <a href="#contact" class="hover:text-sky-300">Contact</a>
-          </nav>
-          <button class="md:hidden text-2xl text-white" id="menuBtn" aria-label="Open menu">☰</button>
-        </div>
-        <nav id="mobileMenu" class="hidden flex-col gap-4 bg-black/60 px-4 pb-4 md:hidden">
-          <a href="#work" class="hover:text-sky-300">Work</a>
-          <a href="#about" class="hover:text-sky-300">About</a>
-          <a href="#contact" class="hover:text-sky-300">Contact</a>
-        </nav>
-      </header>
+      <!-- Dropdown Button (desktop & mobile) -->
+      <div class="absolute top-4 left-4 z-50">
+        <button id="navToggle" class="bg-black/70 text-white px-4 py-2 rounded-md focus:outline-none">
+          ☰ 
+        </button>
 
+  <!-- Dropdown links (initially hidden) -->
+        <div id="navDropdown" class="hidden flex-col mt-2 bg-black/90 rounded-md shadow-lg">
+          <a href="#work" class="block px-4 py-2 hover:bg-sky-500">Listen</a>
+          <a href="#about" class="block px-4 py-2 hover:bg-sky-500">About</a>
+          <a href="#contact" class="block px-4 py-2 hover:bg-sky-500">Contact</a>
+        </div>
+      </div>
+    </div>
+      
+     
       <!-- Hero -->
       <section class="relative overflow-hidden py-24">
         <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
