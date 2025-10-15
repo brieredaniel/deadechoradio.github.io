@@ -73,112 +73,90 @@
 <body class="bg-black text-white">
 
     
-  <!-- SPLIT LEFT-HAND PANEL & MOBILE HEADER -->
-  <div class="flex flex-col md:flex-row h-screen">
+<div class="flex h-screen">
 
   <!-- LEFT SIDE (fixed on desktop) -->
-    <div class="w-full md:w-1/2 h-1/2 md:h-full bg-gray-900 flex flex-col justify-center items-center text-center p-8 md:fixed md:inset-y-0 md:left-0">
-
-    <!-- Desktop Logo + Wordmark -->
-      <div class="hidden md:flex flex-col items-center justify-center w-full max-w-xs mb-6">
-      <!-- Logo -->
-        <img 
-          src="images/IMG_4799.prg.png" 
-          alt="Dead Echo Radio Logo"
-          class="w-full h-auto object-contain mb-4"
-        >
-      <!-- Company Name Wordmark -->
-        <img 
-          src="images/DERname.jpg" 
-          alt="Dead Echo Radio Wordmark"
-          class="w-64 h-auto object-contain mx-auto mb-2"
-        >
-      <!-- Tagline -->
-        <p class="text-lg text-gray-300 italic mt-2 text-center">
-          "Your midnight obsession"
-        </p>
-      </div>
-
-    <!-- Mobile Header: Logo + Woodcut PNG -->
-      <div class="block md:hidden w-full text-center">
-        <img 
-          src="images/deadechoradio_mobileheader.png" 
-          alt="Dead Echo Radio Mobile Header"
-          class="w-full h-auto"
-        >
-      </div>
-    </div>
+  <div class="w-full md:w-1/2 h-1/2 md:h-full bg-gray-900 flex flex-col justify-center items-center text-center p-8 md:fixed md:inset-y-0 md:left-0">
     
-    <!-- RIGHT SIDE (scrollable content) -->
-    <div class="w-full md:w-1/2 md:ml-[50%] h-screen md:h-auto overflow-y-auto bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed">
+    <!-- Desktop Logo + Wordmark -->
+    <div class="hidden md:flex flex-col items-center justify-center w-full max-w-xs mb-6">
+      <img src="images/IMG_4799.png" alt="Logo" class="w-full h-auto object-contain mb-4">
+      <img src="images/DERname.jpg" alt="Wordmark" class="w-64 h-auto object-contain mx-auto mb-2">
+      <p class="text-lg text-gray-300 italic mt-2">"Your midnight obsession"</p>
+    </div>
 
-      <!-- Dropdown Button (desktop & mobile) -->
-      <div class="absolute top-4 left-4 z-50">
-        <button id="navToggle" class="bg-black/70 text-white px-4 py-2 rounded-md focus:outline-none">
-          ☰ 
-        </button>
+    <!-- Mobile Header -->
+    <div class="block md:hidden w-full text-center">
+      <img src="images/logocompact.png" alt="Mobile Header" class="w-full h-auto">
+    </div>
 
-  <!-- Dropdown links (initially hidden) -->
-        <div id="navDropdown" class="hidden flex-col mt-2 bg-black/90 rounded-md shadow-lg">
-          <a href="#work" class="block px-4 py-2 hover:bg-sky-500">Listen</a>
-          <a href="#about" class="block px-4 py-2 hover:bg-sky-500">About</a>
-          <a href="#contact" class="block px-4 py-2 hover:bg-sky-500">Contact</a>
-        </div>
+  </div>
+
+  <!-- RIGHT SIDE (scrollable content) -->
+  <div class="w-full md:w-1/2 md:ml-[50%] relative overflow-y-auto h-screen">
+
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed -z-10"></div>
+
+    <!-- Dropdown Button -->
+    <div class="absolute top-4 left-4 z-50">
+      <button id="navToggle" class="bg-black/70 text-white px-4 py-2 rounded-md focus:outline-none">☰</button>
+      <div id="navDropdown" class="hidden flex-col mt-2 bg-black/90 rounded-md shadow-lg">
+        <a href="#work" class="block px-4 py-2 hover:bg-sky-500">Listen</a>
+        <a href="#about" class="block px-4 py-2 hover:bg-sky-500">About</a>
+        <a href="#contact" class="block px-4 py-2 hover:bg-sky-500">Contact</a>
       </div>
     </div>
-  </div>    
-     
-      <!-- Hero -->
-      <section class="relative overflow-hidden py-24">
-        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <h2 class="text-4xl md:text-5xl font-extrabold mb-4 hero-glow">Where the Airwaves Come Alive</h2>
-          <p class="max-w-2xl mx-auto text-lg text-slate-200 mb-8 hero-glow">
-            Capturing the spirit of old-world radio with a modern twist — stories that linger in the static and echo in the dark.
-          </p>
-          <a href="#contact" class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-md font-semibold transition">Get in Touch</a>
-        </div>
-      </section>
 
-      <!-- Work -->
-      <section id="work" class="py-20 relative z-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-          <h2 class="text-3xl font-bold mb-8 hero-glow">Listen</h2>
-          <p class="max-w-2xl mx-auto text-slate-200 mb-12">
-            Explore a sample of our productions — from ghostly tales to exhilarating sonic journeys.
-          </p>
-          <div class="flex flex-col gap-10 items-center">
-            <!-- Card 1 -->
-           <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
-              <img src="images/gothicwhispers2.jpg" alt="Gothic Whispers" class="w-full h-64 object-cover object-top mb-4 rounded">
-              <h3 class="font-semibold text-white mb-1">Gothic Whispers</h3>
-              <p class="text-sm text-slate-200 mb-2">Classic gothic horror stories, told in fog and flicker.</p>
-              <audio controls class="w-full bg-black/50 rounded px-2 py-1 text-white">
-                <source src="audio/GOTHIC WHISPERS - A Christmas Meeting.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <!-- Card 2 -->
-            <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
-              <img src="images/tfh2.jpeg" alt="The Forbidden Hour" class="w-full h-64 object-cover object-top mb-4 rounded">
-              <h3 class="font-semibold text-white mb-1">The Forbidden Hour</h3>
-              <p class="text-sm text-slate-200 mb-2">A heartpounding hour of Hard Rock, Heavy Metal, Hardcore, and things that generally make your head go bang.</p>
-              <audio controls class="w-full bg-black/50 rounded px-2 py-1 text-white">
-                <source src="audio/TFHep9croppedforOnlineEmbed.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <!-- Card 3 -->
-           <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
-              <img src="images/hauntedradioprint.jpeg" alt="Phantom Frequencies" class="w-full h-64 object-cover mb-4 rounded">
-              <h3 class="font-semibold text-white mb-1">Phantom Frequencies</h3>
-              <p class="text-sm text-slate-200 mb-2">Experimental radio that bends space and sound.</p>
-              <div class="w-full bg-black/50 rounded px-2 py-1 text-center text-white italic">
-                *Coming Soon*
-              </div>
+    <!-- HERO -->
+    <section class="relative py-24">
+      <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 hero-glow">Where the Airwaves Come Alive</h2>
+        <p class="max-w-2xl mx-auto text-lg text-slate-200 mb-8 hero-glow">
+          Capturing the spirit of old-world radio with a modern twist — stories that linger in the static and echo in the dark.
+        </p>
+        <a href="#contact" class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-md font-semibold transition">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-20 relative z-10">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8 hero-glow">Listen</h2>
+        <p class="max-w-2xl mx-auto text-slate-200 mb-12">
+          Explore a sample of our productions — from ghostly tales to exhilarating sonic journeys.
+        </p>
+        <div class="flex flex-col gap-10 items-center">
+          <!-- Card 1 -->
+          <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
+            <img src="images/gothicwhispers2.jpg" alt="Gothic Whispers" class="w-full h-64 object-cover object-top mb-4 rounded">
+            <h3 class="font-semibold text-white mb-1">Gothic Whispers</h3>
+            <p class="text-sm text-slate-200 mb-2">Classic gothic horror stories, told in fog and flicker.</p>
+            <audio controls class="w-full bg-black/50 rounded px-2 py-1 text-white">
+              <source src="audio/GOTHIC WHISPERS - A Christmas Meeting.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <!-- Card 2 -->
+          <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
+            <img src="images/tfh2.jpeg" alt="The Forbidden Hour" class="w-full h-64 object-cover object-top mb-4 rounded">
+            <h3 class="font-semibold text-white mb-1">The Forbidden Hour</h3>
+            <p class="text-sm text-slate-200 mb-2">A heartpounding hour of Hard Rock, Heavy Metal, Hardcore, and things that generally make your head go bang.</p>
+            <audio controls class="w-full bg-black/50 rounded px-2 py-1 text-white">
+              <source src="audio/TFHep9croppedforOnlineEmbed.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <!-- Card 3 -->
+          <div class="w-full max-w-md rounded-xl overflow-hidden shadow bg-black/30 card-glow p-4 flex flex-col">
+            <img src="images/hauntedradioprint.jpeg" alt="Phantom Frequencies" class="w-full h-64 object-cover mb-4 rounded">
+            <h3 class="font-semibold text-white mb-1">Phantom Frequencies</h3>
+            <p class="text-sm text-slate-200 mb-2">Experimental radio that bends space and sound.</p>
+            <div class="w-full bg-black/50 rounded px-2 py-1 text-center text-white italic">
+              *Coming Soon*
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- About -->
       <section id="about" class="max-w-5xl mx-auto px-6 py-20 relative z-10">
