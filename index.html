@@ -133,30 +133,30 @@
     <!-- HERO -->
     <section class="relative py-24">
       <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 hero-glow">Where the Airwaves Come Alive</h2>
+        <!-- Main header -->
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 hero-glow">
+          Where the Airwaves Come Alive
+        </h2>
         <p class="max-w-2xl mx-auto text-lg text-slate-200 mb-20 hero-glow">
-          Capturing the spirit of old-world radio with a modern twist — stories that linger in the static and echo in the dark.
+          Capturing the spirit of old-world radio with a modern twist — stories and sounds that linger in the static, echo in the dark.
         </p>
 
-        <!-- News Bulletin Subheader Paragraph -->
-        <h3 class="text-2xl font-bold mb-8 hero-glow typewriter" id="bulletin-text">
-          Check out the latest episode of our spooky storycast<br>
-          <span class="italic">Gothic Whispers</span> on Vertigo Mystery Radio.<br>  
-          Just in time for Halloween!!!
-        </h3>
+        <!-- Subheader container for JS typewriter -->
+        <h3 class="text-2xl font-bold mb-8 hero-glow" id="bulletin-text-js"></h3>
 
-        <!-- New Button -->
+        <!-- Button, initially hidden -->
         <a href="https://www.vertigotheatre.com/vertigo-mystery-radio" 
-          target="_blank" rel="noopener noreferrer"
-          cclass="inline-flex items-center gap-3 bg-[#1a2420] hover:bg-[#2b423c] text-white px-8 py-4 rounded-lg font-semibold text-2xl 
-          hover:shadow-[0_0_20px_rgba(0,255,255,0.3),0_0_40px_rgba(0,255,255,0.2)] 
-          hover:-translate-y-1 transition-all duration-300 ease-in-out mt-4 opacity-0 scale-90"
-          id="bulletin-button">
-          <img src="images/VERTIGO_mystery_radio_logo.jpg" alt="Signal Icon" class="w-14 h-14">
-          Tune in HERE
+           target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 bg-[#1a2420] hover:bg-[#2b423c] text-white px-8 py-4 rounded-lg font-semibold text-2xl 
+              hover:shadow-[0_0_20px_rgba(0,255,255,0.3),0_0_40px_rgba(0,255,255,0.2)] 
+              hover:-translate-y-1 transition-all duration-300 ease-in-out mt-4 opacity-0 scale-90"
+           id="bulletin-button">
+           <img src="images/VERTIGO_mystery_radio_logo.jpg" alt="Signal Icon" class="w-14 h-14">
+           Tune in HERE
         </a>
       </div>
     </section>
+    
 
     <!-- WORK -->
     <section id="work" class="py-20 relative z-10">
@@ -258,13 +258,30 @@
   </script>
 
   <script>
-  // Wait for typewriter to finish (~5s), then show button
-  setTimeout(() => {
-    const btn = document.getElementById('bulletin-button');
-    btn.classList.remove('opacity-0', 'scale-90');
-    btn.classList.add('opacity-100', 'scale-100', 'transition-transform', 'duration-500');
-  }, 5000); // match your typing duration
-  </script>
+    const text = `Check out the latest episode of our spooky storycast
+    Gothic Whispers on Vertigo Mystery Radio.
+    Just in time for Halloween!!!`;
+
+    const container = document.getElementById('bulletin-text-js');
+    const button = document.getElementById('bulletin-button');
+    let i = 0;
+
+    function typeChar() {
+      if (i < text.length) {
+        const char = text[i] === "\n" ? "<br>" : text[i];
+        container.innerHTML += char;
+        i++;
+        setTimeout(typeChar, 50); // typing speed in ms
+      } else {
+        // Show the button once typing is done
+        button.classList.remove('opacity-0', 'scale-90');
+        button.classList.add('opacity-100', 'scale-100', 'transition-transform', 'duration-500');
+      }
+    }
+
+// Start typing when page loads
+typeChar();
+</script>
 
 </body>
 </html>
