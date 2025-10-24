@@ -72,8 +72,7 @@
       overflow: hidden;         /* ensures text appears character by character */
       white-space: normal;
       border-right: 4px solid rgba(255,255,255,0.8); /* blinking cursor */
-      width: 0;                 /* will be animated */
-      animation: typing 5s steps(120, end) forwards, blink-cursor 0.75s step-end infinite;
+      animation: blink-cursor 0.75s step-end infinite, flicker 1.5s infinite alternate;
     }
 
     /* Typewriter keyframes */
