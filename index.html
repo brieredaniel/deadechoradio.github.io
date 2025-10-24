@@ -87,6 +87,35 @@
       from, to { border-color: transparent }
       50% { border-color: rgba(255,255,255,0.8) }
     }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow: 0 0 4px rgba(255,255,255,0.4),
+                 0 0 8px rgba(255,255,255,0.3);
+      }
+        20%, 22%, 24%, 55% {
+      text-shadow: 0 0 8px rgba(0,255,255,0.6),
+                 0 0 16px rgba(255,0,255,0.4),
+                 0 0 24px rgba(255,255,255,0.2);
+      }
+    }
+
+    .typewriter {
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes background-drift {
+      0% { transform: translate(0px, 0px) scale(1.02); }
+      25% { transform: translate(5px, -3px) scale(1.03); }
+      50% { transform: translate(-4px, 2px) scale(1.02); }
+      75% { transform: translate(3px, -2px) scale(1.01); }
+      100% { transform: translate(0px, 0px) scale(1.02); }
+    }
+
+    .background-drift {
+      animation: background-drift 60s infinite alternate ease-in-out;
+      transform-origin: center;
+    }
   </style>
 </head>
 
@@ -127,9 +156,7 @@
   </div>
 
   <!-- RIGHT SIDE (scrollable content) with Background image -->
-  <div class="w-full md:w-1/2 md:ml-[50%] relative overflow-y-auto h-screen 
-    bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed">
-
+  <div class="absolute inset-0 bg-[url('images/radiointhedark.jpeg')] bg-cover bg-center bg-fixed -z-10 background-drift"></div>
     <!-- HERO -->
     <section class="relative py-24">
       <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
@@ -142,7 +169,7 @@
         </p>
 
         <!-- Subheader container for JS typewriter -->
-        <h3 class="text-2xl font-bold mb-8 hero-glow" id="bulletin-text-js"></h3>
+        <h3 class="text-2xl font-bold mb-8 hero-glow typewriter" id="bulletin-text-js"></h3>
 
         <!-- Button, initially hidden -->
         <a href="https://www.vertigotheatre.com/vertigo-mystery-radio" 
