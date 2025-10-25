@@ -102,6 +102,10 @@
       animation: flicker 1.5s infinite alternate;
     }
 
+    .typewriter.done {
+      border-right: none;
+    }    
+
     @keyframes background-drift {
       0% { transform: translate(0px, 0px) scale(1.02); }
       25% { transform: translate(5px, -3px) scale(1.03); }
@@ -301,15 +305,17 @@
         i++;
         setTimeout(typeChar, 35); // typing speed in ms
       } else {
+        // Hide the cursor
+        container.classList.add('done');
         // Show the button once typing is done
         button.classList.remove('opacity-0', 'scale-90');
         button.classList.add('opacity-100', 'scale-100', 'transition-transform', 'duration-500');
       }
     }
 
-// Start typing when page loads
-typeChar();
-</script>
+  // Start typing when page loads
+  typeChar();
+  </script>
 
 </body>
 </html>
