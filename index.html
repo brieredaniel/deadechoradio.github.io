@@ -174,7 +174,7 @@
         </p>
 
         <!-- Subheader container for JS typewriter -->
-        <h3 class="text-1.75xl font-bold mb-8 hero-glow typewriter" id="bulletin-text-js"></h3>
+        <h3 class="text-1.75xl font-bold mb-8 hero-glow typewriter max-w-2xl mx-auto text-center leading-relaxed" id="bulletin-text-js"></h3>
 
         <!-- Button, initially hidden -->
         <a href="https://www.vertigotheatre.com/vertigo-mystery-radio" 
@@ -290,33 +290,39 @@
   </script>
 
   <script>
-    const text = `Catch the latest episode of our spooky storycast
-    Gothic Whispers on Vertigo Mystery Radio.
-    Just in time for Halloween!!!`;
-
+    const text = `Catch the latest episode of our spooky storycast <em>Gothic Whispers</em> on Vertigo Mystery Radio. Just in time for Halloween!!!`;
+  
     const container = document.getElementById('bulletin-text-js');
     const button = document.getElementById('bulletin-button');
     let i = 0;
-
+    let isTag = false;
+    let html = '';
+  
     function typeChar() {
+      const char = text[i++];
+  
+      if (char === '<') isTag = true;
+      if (char === '>') isTag = false;
+  
+      html += char;
+      container.innerHTML = html;
+  
       if (i < text.length) {
-        const char = text[i] === "\n" ? "<br>" : text[i];
-        container.innerHTML += char;
-        i++;
-        setTimeout(typeChar, 35); // typing speed in ms
+        // Only delay for visible text, skip for tags
+        setTimeout(typeChar, isTag ? 0 : 35);
       } else {
-        // Hide the cursor
+        // Instantly remove the cursor
         container.classList.add('done');
-        // Show the button once typing is done
+        // Reveal button
         button.classList.remove('opacity-0', 'scale-90');
         button.classList.add('opacity-100', 'scale-100', 'transition-transform', 'duration-500');
       }
     }
-
-  // Start typing when page loads
-  typeChar();
+  
+    // Start typing when page loads
+    typeChar();
   </script>
-
+  
 </body>
 </html>
     
