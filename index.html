@@ -299,7 +299,7 @@
         const char = text[i] === "\n" ? "<br>" : text[i];
         container.innerHTML += char;
         i++;
-        setTimeout(typeChar, 40); // typing speed in ms
+        setTimeout(typeChar, 35); // typing speed in ms
       } else {
         // Show the button once typing is done
         button.classList.remove('opacity-0', 'scale-90');
