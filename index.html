@@ -81,9 +81,9 @@
     }
 
     /* Cursor blinking */
-    @keyframes blink-cursor {
-      from, to { border-color: transparent }
-      50% { border-color: rgba(255,255,255,0.8) }
+    @keyframes blink{
+      0%, 50%, 100% { background-color: rgba(255,255,255,0.8); }
+      25%, 75% { background-color: transparent; }
     }
 
     @keyframes flicker {
@@ -98,6 +98,20 @@
       }
     }
 
+    /* Cursor as inline element */
+    .cursor {
+      display: inline-block;
+      width: 1ch;
+      background-color: rgba(255,255,255,0.8);
+      animation: blink 0.7s steps(1) infinite;
+      vertical-align: bottom; /* aligns with text baseline */
+    }
+
+    /* Hide cursor when typing is done */
+    .done .cursor {
+      display: none;
+    }
+    
     .typewriter {
       animation: flicker 1.5s infinite alternate;
     }
@@ -307,7 +321,7 @@
       if (char === '>') isTag = false;
   
       html += char;
-      container.innerHTML = html;
+      container.innerHTML = text.slice(0, i) + '<span class="cursor"></span>';
   
       if (i < text.length) {
         // Only delay for visible text, skip for tags
