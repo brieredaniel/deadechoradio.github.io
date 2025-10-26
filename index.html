@@ -247,11 +247,15 @@
       <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10">
         <h2 class="text-3xl font-bold mb-6 hero-glow">Get in Touch</h2>
         <p class="text-slate-200 mb-10">Interested in collaborating or commissioning a project? We’d love to hear from you.</p>
-        <form class="max-w-md mx-auto grid gap-4" onsubmit="alert('Thanks — message not configured for sending.'); return false;">
-          <input type="text" placeholder="Your Name" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300">
-          <input type="email" placeholder="Your Email" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300">
-          <textarea rows="4" placeholder="Message" required class="border rounded-md p-3 focus:ring focus:ring-sky-200 bg-black/40 text-white placeholder-slate-300"></textarea>
-          <button class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-md">Send Message</button>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+          <input type="hidden" name="access_key" value="f89dbe18-338a-431b-b603-ddda7e22da57">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded">
+          <textarea name="message" placeholder="Your Message" required class="w-full p-2 rounded"></textarea>
+          <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+            Send Message
+          </button>
         </form>
       </section>
 
