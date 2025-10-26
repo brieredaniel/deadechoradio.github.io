@@ -70,7 +70,6 @@
 
     .typewriter {
       white-space: normal;
-      border-right: 4px solid rgba(255,255,255,0.8); /* blinking cursor */
       animation: flicker 1.5s infinite alternate;
     }
 
@@ -78,12 +77,6 @@
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
-    }
-
-    /* Cursor blinking */
-    @keyframes blink{
-      0%, 50%, 100% { background-color: rgba(255,255,255,0.8); }
-      25%, 75% { background-color: transparent; }
     }
 
     @keyframes flicker {
@@ -98,27 +91,9 @@
       }
     }
 
-    /* Cursor as inline element */
-    .cursor {
-      display: inline-block;
-      width: 1ch;
-      background-color: rgba(255,255,255,0.8);
-      animation: blink 0.7s steps(1) infinite;
-      vertical-align: bottom; /* aligns with text baseline */
-    }
-
-    /* Hide cursor when typing is done */
-    .done .cursor {
-      display: none;
-    }
-    
     .typewriter {
       animation: flicker 1.5s infinite alternate;
     }
-
-    .typewriter.done {
-      border-right: none;
-    }    
 
     @keyframes background-drift {
       0% { transform: translate(0px, 0px) scale(1.02); }
@@ -321,15 +296,12 @@
       if (char === '>') isTag = false;
   
       html += char;
-      container.innerHTML = text.slice(0, i) + '<span class="cursor"></span>';
+      container.innerHTML = html;
   
       if (i < text.length) {
         // Only delay for visible text, skip for tags
         setTimeout(typeChar, isTag ? 0 : 35);
       } else {
-        // Instantly remove the cursor
-        container.classList.add('done');
-        // Reveal button
         button.classList.remove('opacity-0', 'scale-90');
         button.classList.add('opacity-100', 'scale-100', 'transition-transform', 'duration-500');
       }
